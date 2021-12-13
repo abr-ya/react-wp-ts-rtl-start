@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import "./Nav.scss";
 
 const Nav = (): JSX.Element => {
-  const title = "React App";
+  const title = "TS React App";
   const links = [
     { name: "Home", link: "/", exact: true },
     { name: "About", link: "/about", exact: false },
   ];
 
-  let htmlLinks: any = [];
+  let htmlLinks: JSX.Element[] = [];
   if (Array.isArray(links) && links.length) {
     htmlLinks = links.map((item) => (
       <li className="nav-item" key={`key_${item.link}`}>

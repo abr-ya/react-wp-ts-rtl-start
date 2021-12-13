@@ -10,10 +10,10 @@
     "build": "yarn run clean-dist && webpack --config=configs/webpack/prod.js",
     "build-n": "node ./nenv.js && yarn run clean-dist && webpack --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
+    "dev": "webpack serve --config=configs/webpack/dev.js",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "fix": "eslint './src/**/*.{js,ts,tsx}' --fix",
-    "start": "yarn run start-dev",
-    "start-dev": "webpack serve --config=configs/webpack/dev.js",
+    "start": "yarn run dev",
     "start-prod": "yarn run build && node express.js",
     "test": "jest --watchAll --config=configs/jest.json",
     "test-c": "jest --coverage --config=configs/jest.json"
